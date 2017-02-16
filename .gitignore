@@ -1,0 +1,5 @@
+/vendor
+/.idea
+.env
+Thumbs.db
+Desktop.ini
