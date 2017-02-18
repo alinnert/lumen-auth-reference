@@ -21,7 +21,6 @@ class AuthController extends Controller
       'name' => $request->name ?? '',
       'email' => $request->email ?? 'user@example.com'
     ]);
-    $newUser->password = $request->password ?? 'secret';
     $newUser->password = password_hash($request->password, PASSWORD_BCRYPT);
     $newUser->save();
     return new Response('ok', 200, ['Content-Type' => 'text/plain']);
